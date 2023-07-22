@@ -1,0 +1,17 @@
+!pip install tensorflow
+
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+import tensorflow as tf
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+temp=pd.read_csv("/content/drive/MyDrive/SalesData.csv")
+temp.head(5)
+temp.tail(5)
+temp.info()
+temp.describe()
