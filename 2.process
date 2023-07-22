@@ -1,0 +1,14 @@
+sns.scatterplot(x=temp['Temperature'],y=temp['Revenue'])
+x_train=temp['Temperature']
+y_train=temp['Revenue']
+
+x_train.shape
+y_train.shape
+
+model=tf.keras.Sequential()#models
+model.add(tf.keras.layers.Dense(units=1,input_shape=[1]))#layers
+model.summary()
+
+model.compile(optimizer=tf.keras.optimizers.Adam(0.5),loss='mean_squared_error')
+
+epoch_hist=model.fit(x_train,y_train,epochs=1000)
